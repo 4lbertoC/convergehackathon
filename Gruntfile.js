@@ -60,7 +60,7 @@ module.exports = function (grunt) {
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= config.app %>/images/{,*/}*',
-          '<%= config.app %>/books/{,*/}*'
+          '<%= config.app %>/books/{,*/}*.*'
         ]
       }
     },
@@ -290,7 +290,7 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'books/{,*/}*.*',
+            'books/**',
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
