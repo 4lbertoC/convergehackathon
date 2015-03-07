@@ -7,8 +7,8 @@
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
+  font-family: times;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -86,4 +86,8 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.chapter {
+  margin-bottom: 20px;
 }
