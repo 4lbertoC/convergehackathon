@@ -91,3 +91,39 @@ body {
 .chapter {
   margin-bottom: 20px;
 }
+
+.controls > .prevPage,
+.controls > .nextPage {
+  width: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.controls > .nextPage {
+  left: 50%;
+}
+
+.prevPage:after {
+  content: "<";
+  top: 50%;
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+  font-family: monospace;
+  transform: scale(1.5, 7.0);
+  opacity: 0.4;
+}
+
+.nextPage:after {
+  content: ">";
+  top: 50%;
+  position: absolute;
+  right: 0;
+  font-size: 1em;
+  font-family: monospace;
+  transform: scale(1.5, 7.0);
+  opacity: 0.4;
+}
+}
