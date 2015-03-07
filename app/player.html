@@ -1,0 +1,199 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>ConvergeHackathon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/player.css -->
+    <link rel="stylesheet" href="styles/player.css">
+    <!-- endbuild -->
+    <link rel="import" href="books/the_abbots_ghost/text/the_abbots_ghost.html">
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <audio src="books/the_abbots_ghost/audio/abbotsghost_02_alcott_64kb.mp3"></audio>
+
+    <div class="container"></div>
+    <div class="controls">
+      <div class="prevPage"></div>
+      <div class="nextPage"></div>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+        <!-- build:js(.) scripts/plugins.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <script>
+
+          var audioTag = document.querySelector('audio');
+
+          var positions = [
+            {
+              "id": 0,
+              "position": 21,
+            },
+            {
+              "id": 1,
+              "position": 75,
+              "time": 1.15
+            },
+            {
+              "id": 2,
+              "position": 86,
+              "time": 1.26
+            },
+            {
+              "id": 3,
+              "position": 88,
+              "time": 1.28
+            },
+            {
+              "id": 4,
+              "position": 98,
+              "time": 1.38
+            },
+            {
+              "id": 5,
+              "position": 103,
+              "time": 1.53
+            },
+            {
+              "id": 6,
+              "position": 119,
+              "time": 1.59
+            },
+            {
+              "id": 7,
+              "position": 122,
+              "time": 2.02
+            },
+            {
+              "id": 8,
+              "position": 143,
+              "time": 2.23
+            },
+            {
+              "id": 9,
+              "position": 153,
+              "time": 2.33
+            },
+            {
+              "id": 10,
+              "position": 160,
+              "time": 2.40
+            },
+            {
+              "id": 11,
+              "position": 167,
+              "time": 2.47
+            },
+            {
+              "id": 12,
+              "position": 173,
+              "time": 2.53
+            },
+            {
+              "id": 13,
+              "position": 179,
+              "time": 2.59
+            },
+            {
+              "id": 14,
+              "position": 191,
+              "time": 3.11
+            },
+            {
+              "id": 15,
+              "position": 211,
+              "time": 3.31
+            },
+            {
+              "id": 16,
+              "position": 220,
+              "time": 3.40
+            },
+            {
+              "id": 17,
+              "position": 252,
+              "time": 4.12
+            },
+            {
+              "id": 18,
+              "position": 256,
+              "time": 4.16
+            },
+            {
+              "id": 19,
+              "position": 268,
+              "time": 4.28
+            },
+            {
+              "id": 20,
+              "position": 282,
+              "time": 4.42
+            },
+            {
+              "id": 21,
+              "position": 319,
+              "time": 5.19
+            },
+            {
+              "id": 22,
+              "position": 322,
+              "time": 5.22
+            }
+
+          ];
+
+          var hash = window.location.hash.substr(1);
+          var paragraph = hash.match(/p(.*)/)[1];
+
+          for (var pos in positions) {
+            if (positions[pos].id == paragraph) {
+              audioTag.currentTime = positions[pos].position;
+            }
+          }
+
+          audioTag.play();
+
+        </script>
+</body>
+</html>
